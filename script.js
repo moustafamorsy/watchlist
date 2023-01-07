@@ -34,7 +34,7 @@ document.querySelector("button").addEventListener("click", () => {
 
 async function movieData(value, page) {
   const response = await fetch(
-    `http://www.omdbapi.com/?s=${value}&page=${page}&apikey=56c8e3fa`
+    `https://www.omdbapi.com/?s=${value}&page=${page}&apikey=56c8e3fa`
   );
   const data = await response.json();
 
@@ -54,7 +54,7 @@ function singleMovieData(data) {
 
 async function findMovieData(id) {
   const response = await fetch(
-    `http://www.omdbapi.com/?i=${id}&page=3&apikey=56c8e3fa`
+    `https://www.omdbapi.com/?i=${id}&page=3&apikey=56c8e3fa`
   );
   const data = await response.json();
 
@@ -113,7 +113,7 @@ document.body.addEventListener('click' , (e) =>{
 async function watchList(id) {
  console.log(id);
   const response = await fetch(
-    `http://www.omdbapi.com/?i=${id}&apikey=56c8e3fa`
+    `https://www.omdbapi.com/?i=${id}&apikey=56c8e3fa`
   );
   const data = await response.json();
  watchLists.unshift(data)
